@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>858</width>
+    <height>567</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout" rowstretch="3,1,2,0,0" columnstretch="2,1" rowminimumheight="0,0,0,0,0">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMaximumSize</enum>
+      </property>
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <item row="1" column="0">
+       <layout class="QVBoxLayout" name="SetsLay">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <family>DejaVu Sans</family>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="lineWidth">
+           <number>1</number>
+          </property>
+          <property name="text">
+           <string>Settings</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QSpinBox" name="MaxTempSB">
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="SetMaxTemp">
+            <property name="text">
+             <string>SetMaxTemp</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QSpinBox" name="MinTempSB"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="SetMinTemp">
+            <property name="text">
+             <string>SetMinTemp</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QSpinBox" name="PeriodSB"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="SetPeriod">
+            <property name="text">
+             <string>SetPeriod</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="1">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QListWidget" name="list"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="BTAddr"/>
+        </item>
+        <item row="3" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="scan">
+            <property name="text">
+             <string>Scan</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="ConnectButton">
+            <property name="text">
+             <string>Connect</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <layout class="QHBoxLayout" name="Displ">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="lcd1label">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>DejaVu Sans</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Temperature</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLCDNumber" name="lcd1">
+            <property name="smallDecimalPoint">
+             <bool>false</bool>
+            </property>
+            <property name="digitCount">
+             <number>5</number>
+            </property>
+            <property name="segmentStyle">
+             <enum>QLCDNumber::Filled</enum>
+            </property>
+            <property name="value" stdset="0">
+             <double>0.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>DejaVu Sans</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Timer</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLCDNumber" name="lcd2"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="1">
+       <widget class="QTextEdit" name="text"/>
+      </item>
+      <item row="2" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="2,5,1">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="StateLabel">
+            <property name="font">
+             <font>
+              <family>DejaVu Sans</family>
+              <pointsize>24</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>state</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="HeatLabel">
+            <property name="font">
+             <font>
+              <family>DejaVu Sans</family>
+              <pointsize>24</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>HEAT</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="FlowLabel">
+            <property name="font">
+             <font>
+              <family>DejaVu Sans</family>
+              <pointsize>24</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>FLOW</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4" stretch="2,1">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QPushButton" name="LetStop">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+                <horstretch>0</horstretch>
+                <verstretch>1</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>DejaVu Sans</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Stop</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="LetStart">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>DejaVu Sans</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Start</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="Reset">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>DejaVu Sans</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Reset</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QPushButton" name="GetStatus">
+            <property name="text">
+             <string>GetStatus</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="GetSets">
+            <property name="text">
+             <string>GetSets</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="TestButton">
+            <property name="text">
+             <string>Test</string>
+            </property>
+            <property name="icon">
+             <iconset theme="close">
+              <normaloff>.</normaloff>.</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="QuitB">
+            <property name="text">
+             <string>Quit</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
